@@ -88,8 +88,8 @@ def camTodatabase():
                 strLists = lines[i].split()
                 cameraId=int(strLists[0])
                 cameraModel=camModelDict[strLists[1]] #SelectCameraModel
-                width=int(strLists[2])
-                height=int(strLists[3])
+                width=int(float(strLists[2]))
+                height=int(float(strLists[3]))
                 paramstr=np.array(strLists[4:12])
                 params = paramstr.astype(np.float64)
                 idList.append(cameraId)
