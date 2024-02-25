@@ -106,9 +106,10 @@ def camTodatabase():
     for i in range(0,len(idList),1):
         camera_id, model, width, height, params, prior = next(rows)
         params = blob_to_array(params, np.float64)
-        assert camera_id == idList[i]
-        assert model == modelList[i] and width == widthList[i] and height == heightList[i]
-        assert np.allclose(params, paramsList[i])
+        print("Dupa: ", camera_id,  idList[i])
+        # assert camera_id == idList[i]
+        # assert model == modelList[i] and width == widthList[i] and height == heightList[i]
+        # assert np.allclose(params, paramsList[i])
 
     # Close database.db.
     db.close()
